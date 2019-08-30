@@ -51,9 +51,9 @@ pipeline {
 		script {
 			rtMaven.tool = 'Maven-3.5.3' //Maven tool name specified in Jenkins configuration
 		
-			rtMaven.deployer releaseRepo: 'jenkins-snapshot', snapshotRepo: 'jenkins-integration', server: server //Defining where the build artifacts should be deployed to
+			rtMaven.deployer releaseRepo: 'libs-release', snapshotRepo: 'libs-snapshot', server: server //Defining where the build artifacts should be deployed to
 			
-			rtMaven.resolver releaseRepo:'jenkins-snapshot', snapshotRepo: 'jenkins-integration', server: server //Defining where Maven Build should download its dependencies from
+			rtMaven.resolver releaseRepo:'libs-release', snapshotRepo: 'libs-snapshot', server: server //Defining where Maven Build should download its dependencies from
 			
 			rtMaven.deployer.artifactDeploymentPatterns.addExclude("pom.xml") //Exclude artifacts from being deployed
 			
