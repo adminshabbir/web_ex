@@ -78,6 +78,7 @@ pipeline {
 
         }
 
+//shabbir
         //stage('Publish build info') {
         //      steps {
         //        script {
